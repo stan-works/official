@@ -1,0 +1,276 @@
+/* フォントと全体レイアウト */
+body {
+    font-family: "Rounded Mplus 1c", sans-serif;
+    margin: 0;
+    /* background: #fff8f0; */
+    color: #333;
+    font-size: 0.8rem;
+  }
+
+a{
+  text-decoration: none;
+}
+
+/* カーソル */
+  /* 中央のドット（カーソルの中心） */
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: cyan;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+/* 外側のリング */
+.cursor-ring {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  border: 2px solid cyan;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease-out;
+}
+  /* カーソル----------------------------- */
+  
+  header {
+    /* background: #ffffff; */
+    color: #5d4d92;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    color: #5d4d92;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    background-color: #5d4d92;
+    height: 4px;
+    margin: 4px 0;
+    width: 25px;
+    border-radius: 2px;
+  }
+  
+  /* Hero セクション */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;      /* 垂直中央 */
+    justify-content: center;  /* 水平中央 */
+  }
+  
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;  /* 縦方向に並べる */
+    gap: 1rem;               /* h1とpの間にスペース */
+  }
+  
+
+
+
+  /* .hero {
+    text-align: center;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 5rem 2rem;
+    max-width: 100%;
+    height: 50vh;
+    margin-top: -77.69px;
+  }
+
+  .hero .hero-bg{
+    width: 100%;
+    height: 100%;
+  }
+   */
+  .section {
+    padding: 4rem 2rem;
+    max-width: 960px;
+    margin: auto;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background: white;
+    /* border-radius: 5px; */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    padding: 1rem;
+
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    display: block;
+    height: 250px;
+    object-fit: contain;
+  }
+
+  #info h2 a{
+    display: block;
+        max-width: 960px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #5d4d92;
+    padding-block: 2rem;
+  }
+
+  #info h2 a:hover{
+    background-color: #5d4d92;
+    color: white;
+  }
+
+
+
+  /* フォームとフッター */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  input, textarea {
+    padding: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  button {
+    padding: 1rem;
+    background: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  footer {
+    background-color: #5d4d92;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+  }
+  
+  /* detail */
+  #detail-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* 各画像のスタイル */
+  .detail-img {
+    max-width:  300px;
+    aspect-ratio:  1/1;
+    object-fit: contain;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+  /* アニメーション */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    nav {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: white;
+      width: 200px;
+      display: none;
+      flex-direction: column;
+      padding: 1rem;
+      opacity: 0.7;
+    }
+  
+    nav.active {
+      display: flex;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .detail-img {
+      width: 100%;
+    }
+  }
+  
