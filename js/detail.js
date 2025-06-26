@@ -15,8 +15,11 @@ const works = {
   },
   2: {
     title: "FAA様",
-    img: "images/FAA_logo_fin.png",
-    description: "FAA様の企業ロゴをデザインし、ブランドイメージを刷新しました。"
+    images: [
+      "images/FAA_logo_fin.png",
+      "images/yorisoumirai_mockup.png"
+    ],
+    description: "FAA様の企業ロゴデザイン、ホームページ制作し、ブランドイメージを刷新しました。"
   },
   3: {
     title: "マイデンタルクリニック様",
