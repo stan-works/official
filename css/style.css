@@ -9,6 +9,7 @@ body {
 
 a{
   text-decoration: none;
+  color: #5d4d92;
 }
 
 /* カーソル */
@@ -172,6 +173,7 @@ a{
     text-align: center;
     border: 1px solid #5d4d92;
     padding-block: 2rem;
+    color:  #5d4d92;
   }
 
   #info h2 a:hover{
