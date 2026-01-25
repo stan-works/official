@@ -8,9 +8,9 @@ const works = {
   1: {
     title: "ularaco様",
     images: [
-        "images/ularaco_sign.jpg",
-        "images/ularaco_card.png"
-      ],
+      "images/ularaco_sign.jpg",
+      "images/ularaco_card.jpeg"
+    ],
     description: "ularaco様のロゴおよびショップカードデザインを担当しました。"
   },
   2: {
@@ -33,17 +33,17 @@ const works = {
   },
   5: {
     title: "しょうだ様",
-    img: "images/shoda.png",
+    img: "images/shoda.jpeg",
     description: "店舗のチラシを制作しました。"
   },
   6: {
     title: "DIVA様",
-    img: "images/diva.png",
+    img: "images/diva.jpeg",
     description: "バーのチラシ制作を担当しました。"
   },
   7: {
     title: "HarmonyH様",
-    img: "images/harmonyh.png",
+    img: "images/harmonyh.jpeg",
     description: "結婚式場の落ち着いたイメージを反映したオープンチラシをデザインしました。"
   },
   8: {
@@ -55,6 +55,22 @@ const works = {
     title: "おかだ歯科様",
     img: "images/okada.png",
     description: "地域密着型歯科医院の信頼感を表現するプレゼンスライドを提供しました。"
+  },
+  10: {
+    title: "商工会議所様",
+    images: [
+      "images/sougyoujyuku_ol_tokutei_1.png",
+      "images/sougyoujyuku_ol_tokutei_2.png"
+    ],
+    description: "商工会議所のチラシを作成しました。"
+  },
+  11: {
+    title: "洋菓子店様",
+    images: [
+      "images/bag1.jpeg",
+      "images/bag2.jpeg"
+    ],
+    description: "洋菓子店のショップバッグを作成しました。"
   }
 };
 
@@ -66,10 +82,10 @@ const imagesContainer = document.getElementById("detail-images");
 if (works[id]) {
   const work = works[id];
   // 統一処理（.img → .images へ変換）
-if (work.img && !work.images) {
+  if (work.img && !work.images) {
     work.images = [work.img];
   }
-  
+
   titleEl.textContent = work.title;
   descEl.textContent = work.description;
 
