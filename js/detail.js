@@ -11,7 +11,7 @@ const works = {
       "images/ularaco_sign.jpg",
       "images/ularaco_card.jpeg"
     ],
-    description: "ularaco様のロゴおよびショップカードデザインを担当しました。"
+    description: "スイーツやカフェを展開するularaco様のロゴおよびショップカードデザインを担当しました。"
   },
   2: {
     title: "FAA様",
@@ -19,7 +19,7 @@ const works = {
       "images/FAA_logo_fin.png",
       "images/yorisoumirai_mockup.png"
     ],
-    description: "FAA様の企業ロゴデザイン、ホームページ制作し、ブランドイメージを刷新しました。"
+    description: "FAA様の企業ロゴデザイン、LP制作、Webサイト制作し、ブランドイメージを刷新しました。"
   },
   3: {
     title: "マイデンタルクリニック様",
@@ -34,17 +34,17 @@ const works = {
   5: {
     title: "しょうだ様",
     img: "images/shoda.jpeg",
-    description: "店舗のチラシを制作しました。"
+    description: "「特別な日や大切な会話の場にふさわしいお店であること」が伝わることを意識した、店舗のチラシを制作しました。"
   },
   6: {
     title: "DIVA様",
     img: "images/diva.jpeg",
-    description: "バーのチラシ制作を担当しました。"
+    description: "バーのチラシ制作を担当しました。初めて来店される方でも入りやすく明るいイメージのご依頼。"
   },
   7: {
     title: "HarmonyH様",
     img: "images/harmonyh.jpeg",
-    description: "結婚式場の落ち着いたイメージを反映したオープンチラシをデザインしました。"
+    description: "クラシカルな結婚式場の落ち着いたイメージを反映したオープンチラシをデザインしました。"
   },
   8: {
     title: "purple様",
@@ -70,7 +70,7 @@ const works = {
       "images/bag1.jpeg",
       "images/bag2.jpeg"
     ],
-    description: "洋菓子店のショップバッグを作成しました。"
+    description: "イメージを一新したいというご依頼の元、洋菓子店のショップバッグを作成しました。"
   }
 };
 
