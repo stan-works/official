@@ -89,12 +89,23 @@ if (works[id]) {
   titleEl.textContent = work.title;
   descEl.textContent = work.description;
 
-  work.images.forEach(src => {
+  // 画像を順次表示（アニメーション付き）
+  work.images.forEach((src, index) => {
     const img = document.createElement("img");
     img.src = src;
     img.alt = work.title + "の画像";
     img.className = "detail-img";
+    img.style.opacity = "0";
+    img.style.transform = "translateY(30px)";
+    
     imagesContainer.appendChild(img);
+    
+    // 順次アニメーション
+    setTimeout(() => {
+      img.style.transition = "all 0.6s ease";
+      img.style.opacity = "1";
+      img.style.transform = "translateY(0)";
+    }, 100 * (index + 1));
   });
 } else {
   titleEl.textContent = "実績が見つかりません";
