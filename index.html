@@ -1,121 +1,323 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="stan worksは、グラフィック・webデザインを通じて「伝わる」をカタチにします。" />
   <title>stan works | 公式サイト</title>
   <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+  <!-- 背景アニメーション -->
+  <div class="bg-gradient"></div>
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
+  </div>
 
-  <header>
-    <div class="logo"><a href="#"><img src="images/logo.svg" alt="logo"></a></div>
-    <nav id="nav">
+  <!-- カスタムカーソル -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- グラスモーフィックヘッダー -->
+  <header class="glass-header">
+    <div class="logo">
+      <a href="#" class="logo-link">
+        <img src="images/logo.svg" alt="stan works" class="logo-img">
+      </a>
+    </div>
+    <nav id="nav" class="glass-nav">
       <ul>
-        <li><a href="#services">サービス</a></li>
-        <li><a href="#works">制作実績</a></li>
-        <li><a href="#company">会社情報</a></li>
-        <li><a href="form.html">お問い合わせ</a></li>
+        <li><a href="#services" class="nav-link">サービス</a></li>
+        <li><a href="#works" class="nav-link">制作実績</a></li>
+        <li><a href="#company" class="nav-link">わたしについて</a></li>
+        <li><a href="form.html" class="nav-link nav-cta">お問い合わせ</a></li>
       </ul>
     </nav>
     <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </header>
 
+  <!-- ヒーローセクション -->
   <section class="hero">
     <video autoplay muted loop playsinline class="hero-bg">
       <source src="video/video-bg.mp4" type="video/mp4">
       お使いのブラウザでは動画を再生できません。
     </video>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Create work people stan.</h1>
-      <!-- <p>誰かの仕事を推せるような、推される仕事をしよう。</p> -->
+      <div class="hero-text-container">
+        <h1 class="hero-title">
+          <span class="hero-title-line">Create work</span>
+          <span class="hero-title-line">people stan.</span>
+        </h1>
+        <!-- <p class="hero-subtitle">誰かの仕事を推せるような、推される仕事をしよう。</p> -->
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-
-  <section id="services" class="section fade-in">
-    <h2>サービス</h2>
-    <p>Webサイト制作 / ロゴデザイン / UI・UX改善 / フロントエンド開発 / ロゴ制作 / 名刺・フライヤー・パンフレットなど紙媒体デザイン</p>
+  <!-- サービスセクション -->
+  <section id="services" class="section services-section">
+    <div class="section-header">
+      <div class="section-label glass-label">Services</div>
+      <h2 class="section-title">サービス</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card glass-card" data-delay="0">
+        <div class="service-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect x="5" y="8" width="30" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M5 14H35" stroke="currentColor" stroke-width="2"/>
+            <circle cx="10" cy="11" r="1" fill="currentColor"/>
+            <circle cx="14" cy="11" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Webサイト制作</h3>
+        <p>レスポンシブで美しいWebサイトを構築します</p>
+      </div>
+      <div class="service-card glass-card" data-delay="100">
+        <div class="service-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2"/>
+            <path d="M20 8V20L26 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>ロゴデザイン</h3>
+        <p>ブランドの個性を表現するロゴを制作</p>
+      </div>
+      <div class="service-card glass-card" data-delay="200">
+        <div class="service-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect x="8" y="8" width="24" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 8V32M24 8V32M8 16H32M8 24H32" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>UI・UX改善</h3>
+        <p>ユーザー体験を最適化し、成果を向上</p>
+      </div>
+      <div class="service-card glass-card" data-delay="300">
+        <div class="service-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M10 25L16 19L22 25L30 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M25 17H30V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>フロントエンド開発</h3>
+        <p>最新技術で高速かつ洗練されたUIを実装</p>
+      </div>
+      <div class="service-card glass-card" data-delay="400">
+        <div class="service-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect x="6" y="10" width="28" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 16H28M12 20H22M12 24H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>紙媒体デザイン</h3>
+        <p>名刺・フライヤー・パンフレット等の制作</p>
+      </div>
+      <div class="service-card glass-card" data-delay="500">
+        <div class="service-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M20 10L25 18H15L20 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="20" cy="26" r="4" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>ブランディング</h3>
+        <p>一貫したブランド体験をデザイン</p>
+      </div>
+    </div>
   </section>
 
-  <section id="works" class="section fade-in">
-    <h2>制作実績</h2>
-    <div class="cards">
-      <!-- 9個の実績カード -->
-      <a href="detail.html?id=1" class="card"><img src="images/ularaco_sign.jpg" alt="作品1">
-        <!-- <h3>ularaco様</h3> -->
+  <!-- 制作実績セクション -->
+  <section id="works" class="section works-section">
+    <div class="section-header">
+      <div class="section-label glass-label">Portfolio</div>
+      <h2 class="section-title">制作実績</h2>
+    </div>
+    <div class="works-grid">
+      <a href="detail.html?id=1" class="work-card glass-card" data-category="branding">
+        <div class="work-image">
+          <img src="images/ularaco_sign.jpg" alt="ularaco様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">ularaco様</h3>
+          <p class="work-category">Branding / Logo Design</p>
+        </div>
       </a>
-      <a href="detail.html?id=2" class="card"><img src="images/FAA_logo_fin.png" alt="作品2">
-        <!-- <h3>FAA様</h3> -->
+      <a href="detail.html?id=2" class="work-card glass-card" data-category="web">
+        <div class="work-image">
+          <img src="images/FAA_logo_fin.png" alt="FAA様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">FAA様</h3>
+          <p class="work-category">Web Design / Branding</p>
+        </div>
       </a>
-      <a href="detail.html?id=3" class="card"><img src="images/mydentalclinic.png" alt="作品3">
-        <!-- <h3>マイデンタルクリニック様</h3> -->
+      <a href="detail.html?id=3" class="work-card glass-card" data-category="branding">
+        <div class="work-image">
+          <img src="images/mydentalclinic.png" alt="マイデンタルクリニック様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">My Dental Clinic様</h3>
+          <p class="work-category">Logo Design</p>
+        </div>
       </a>
-      <a href="detail.html?id=4" class="card"><img src="images/hogushinokokage.png" alt="作品4">
-        <!-- <h3>ほぐしのこかげ神戸様</h3> -->
+      <a href="detail.html?id=4" class="work-card glass-card" data-category="branding">
+        <div class="work-image">
+          <img src="images/hogushinokokage.png" alt="ほぐしのこかげ神戸様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">ほぐしのこかげ神戸様</h3>
+          <p class="work-category">Logo Design</p>
+        </div>
       </a>
-      <a href="detail.html?id=5" class="card"><img src="images/shoda.jpeg" alt="作品5">
-        <!-- <h3>しょうだ様</h3> -->
+      <a href="detail.html?id=5" class="work-card glass-card" data-category="print">
+        <div class="work-image">
+          <img src="images/shoda.jpeg" alt="しょうだ様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">しょうだ様</h3>
+          <p class="work-category">Print Design</p>
+        </div>
       </a>
-      <a href="detail.html?id=6" class="card"><img src="images/diva.jpeg" alt="作品6">
-        <!-- <h3>DIVA様</h3> -->
+      <a href="detail.html?id=6" class="work-card glass-card" data-category="print">
+        <div class="work-image">
+          <img src="images/diva.jpeg" alt="DIVA様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">DIVA様</h3>
+          <p class="work-category">Print Design</p>
+        </div>
       </a>
-      <a href="detail.html?id=7" class="card"><img src="images/harmonyh.jpeg" alt="作品7">
-        <!-- <h3>HarmonyH様</h3> -->
+      <a href="detail.html?id=7" class="work-card glass-card" data-category="print">
+        <div class="work-image">
+          <img src="images/harmonyh.jpeg" alt="HarmonyH様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">HarmonyH様</h3>
+          <p class="work-category">Print Design</p>
+        </div>
       </a>
-      <a href="detail.html?id=8" class="card"><img src="images/purple_mockup.png" alt="作品8">
-        <!-- <h3>purple様</h3> -->
+      <a href="detail.html?id=8" class="work-card glass-card" data-category="web">
+        <div class="work-image">
+          <img src="images/purple_mockup.png" alt="purple様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">purple様</h3>
+          <p class="work-category">Web Design / Branding</p>
+        </div>
       </a>
-      <a href="detail.html?id=9" class="card"><img src="images/okada.png" alt="作品9">
-        <!-- <h3>おかだ歯科様</h3> -->
+      <a href="detail.html?id=9" class="work-card glass-card" data-category="presentation">
+        <div class="work-image">
+          <img src="images/okada.png" alt="おかだ歯科様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">おかだ歯科様</h3>
+          <p class="work-category">Presentation Design</p>
+        </div>
       </a>
-      <a href="detail.html?id=10" class="card"><img src="images/sougyoujyuku_ol_tokutei.jpeg" alt="作品10">
-        <!-- <h3>商工会議所様</h3> -->
+      <a href="detail.html?id=10" class="work-card glass-card" data-category="print">
+        <div class="work-image">
+          <img src="images/sougyoujyuku_ol_tokutei.jpeg" alt="商工会議所様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">商工会議所様</h3>
+          <p class="work-category">Print Design</p>
+        </div>
       </a>
-      <a href="detail.html?id=11" class="card"><img src="images/bag1.jpeg" alt="作品11">
-        <!-- <h3>洋菓子店様</h3> -->
+      <a href="detail.html?id=11" class="work-card glass-card" data-category="branding">
+        <div class="work-image">
+          <img src="images/bag1.jpeg" alt="洋菓子店様">
+          <div class="work-overlay"></div>
+        </div>
+        <div class="work-info">
+          <h3 class="work-title">洋菓子店様</h3>
+          <p class="work-category">Packaging Design</p>
+        </div>
       </a>
     </div>
-    <p>そのほか、企業パンフレットや冊子制作などあり。詳細はお問い合わせください。</p>
+    <div class="works-note glass-card">
+      <p>そのほか、企業パンフレットや冊子制作などあり。詳細はお問い合わせください。</p>
+    </div>
   </section>
 
-  <section id="company" class="section fade-in">
-    <h2>会社情報</h2>
-    <p>
-      stan worksは、デザインと最新のテクノロジーを組み合わせて「伝わる」をカタチにします。<br>
-      Webや紙媒体のデザインはもちろん、AIなどの最新技術も活用しながら、お客様の課題を一緒に解決します。<br>
-      まずはお気軽にご相談ください！
-    </p>
+  <!-- 会社情報セクション -->
+  <section id="company" class="section company-section">
+    <div class="company-container glass-card-large">
+      <div class="section-header">
+        <div class="section-label glass-label">About</div>
+        <h2 class="section-title">わたしについて</h2>
+      </div>
+      <div class="company-content">
+        <p class="company-text">
+          stan worksは、デザインと最新のテクノロジーを組み合わせて「伝わる」をカタチにします。
+        </p>
+        <p class="company-text">
+          Webや紙媒体のデザインはもちろん、AIなどの最新技術も活用しながら、お客様の課題を一緒に解決します。
+        </p>
+        <p class="company-text">
+          まずはお気軽にご相談ください！
+        </p>
+      </div>
+    </div>
   </section>
 
-  <section id="info" class="section fade-in">
-    <h2><a href="form.html">お問い合わせはこちら</a></h2>
+  <!-- CTAセクション -->
+  <section id="cta" class="section cta-section">
+    <div class="cta-container glass-card-large">
+      <h2 class="cta-title">プロジェクトパートナーとして</h2>
+      <p class="cta-text">あなたのアイデアを現実に変えるお手伝いをします</p>
+      <a href="form.html" class="cta-button glass-button-large">
+        <span>お問い合わせ</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
   </section>
 
-  <!-- <section id="contact" class="section fade-in">
-    <h2>お問い合わせ</h2>
-    <form>
-      <input type="text" placeholder="お名前" required>
-      <input type="email" placeholder="メールアドレス" required>
-      <textarea placeholder="お問い合わせ内容" required></textarea>
-      <button type="submit">送信</button>
-    </form>
-  </section> -->
-
-  <footer>
-    <p>&copy;stan works</p>
+  <!-- フッター -->
+  <footer class="glass-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.svg" alt="stan works">
+      </div>
+      <nav class="footer-nav">
+        <a href="#services">サービス</a>
+        <a href="#works">制作実績</a>
+        <a href="#company">わたしについて</a>
+        <a href="form.html">お問い合わせ</a>
+      </nav>
+      <p class="footer-copyright">&copy; 2024 stan works. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="js/cursor.js"></script>
   <script src="js/script.js"></script>
 </body>
-
 </html>
