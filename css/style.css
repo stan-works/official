@@ -10,7 +10,7 @@
   --color-accent: #10b981;
   --color-bg-light: #f0f9ff;
   --color-bg-mid: #e0f2fe;
-  --color-text: #1e293b;
+  --color-text: #6667AB;
   --color-text-muted: #64748b;
   --color-glass-bg: rgba(255, 255, 255, 0.7);
   --color-glass-border: rgba(59, 130, 246, 0.2);
@@ -180,7 +180,7 @@ body {
   background: var(--color-glass-bg);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-radius: 24px;
+  border-radius: 10px;
   border: 1px solid var(--color-glass-border);
   box-shadow: 
     0 8px 32px var(--color-glass-shadow),
@@ -188,19 +188,19 @@ body {
   transition: all var(--transition-normal);
 }
 
-.glass-card:hover {
+/* .glass-card:hover {
   transform: translateY(-4px);
   border-color: rgba(59, 130, 246, 0.3);
   box-shadow: 
     0 12px 48px rgba(59, 130, 246, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
-}
+} */
 
 .glass-card-large {
   background: var(--color-glass-bg);
   backdrop-filter: blur(var(--glass-blur-heavy));
   -webkit-backdrop-filter: blur(var(--glass-blur-heavy));
-  border-radius: 32px;
+  border-radius: 10px;
   border: 1px solid var(--color-glass-border);
   padding: var(--spacing-lg);
   box-shadow: 
@@ -330,13 +330,13 @@ header:hover {
   width: 100%;
   height: auto;
   display: block;
-  filter: brightness(0) saturate(100%) invert(32%) sepia(85%) saturate(2313%) hue-rotate(207deg) brightness(94%) contrast(95%);
-  transition: filter var(--transition-fast);
+  /* filter: brightness(0) saturate(100%) invert(32%) sepia(85%) saturate(2313%) hue-rotate(207deg) brightness(94%) contrast(95%);
+  transition: filter var(--transition-fast); */
 }
 
-.logo-link:hover .logo-img {
+/* .logo-link:hover .logo-img {
   filter: brightness(0) saturate(100%) invert(46%) sepia(98%) saturate(1798%) hue-rotate(201deg) brightness(99%) contrast(93%);
-}
+} */
 
 nav ul {
   list-style: none;
@@ -615,12 +615,9 @@ nav ul {
 }
 
 .section-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 2.5rem);
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+color: var(--color-text);
   margin-top: var(--spacing-sm);
 }
 
@@ -635,7 +632,7 @@ nav ul {
 }
 
 .service-card {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   text-align: center;
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
@@ -682,7 +679,7 @@ nav ul {
 }
 
 .service-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: var(--spacing-sm);
   color: var(--color-text);
@@ -712,10 +709,10 @@ nav ul {
   transition: all var(--transition-normal);
 }
 
-.work-card:hover {
+/* .work-card:hover {
   box-shadow: 0 16px 48px rgba(59, 130, 246, 0.25);
   border-color: rgba(59, 130, 246, 0.4);
-}
+} */
 
 .work-image {
   position: relative;
@@ -760,18 +757,20 @@ nav ul {
 }
 
 .work-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: var(--spacing-xs);
   color: var(--color-text);
+  text-align: center;
 }
 
 .work-category {
   font-size: 0.875rem;
-  color: var(--color-primary);
+  color: var(--color-text-muted);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-align: center;
 }
 
 .works-note {
@@ -794,7 +793,7 @@ nav ul {
 
 .company-content {
   margin-top: var(--spacing-lg);
-  max-width: 800px;
+  max-width: 984px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -865,8 +864,8 @@ nav ul {
 .footer-logo img {
   width: 100%;
   height: auto;
-  filter: brightness(0) saturate(100%) invert(32%) sepia(85%) saturate(2313%) hue-rotate(207deg) brightness(94%) contrast(95%);
-  opacity: 0.8;
+  /* filter: brightness(0) saturate(100%) invert(32%) sepia(85%) saturate(2313%) hue-rotate(207deg) brightness(94%) contrast(95%);
+  opacity: 0.8; */
 }
 
 .footer-nav {
@@ -1017,12 +1016,9 @@ nav ul {
 }
 
 .detail-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 700;
-  background: linear-gradient(135deg, #fff 0%, var(--color-primary-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-text);
   margin: var(--spacing-md) 0;
 }
 
@@ -1090,8 +1086,6 @@ nav ul {
   font-size: 1.125rem;
   color: var(--color-text-muted);
   margin-top: var(--spacing-md);
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
 }
 
 .form-container {
