@@ -71,6 +71,13 @@ const works = {
       "images/bag2.jpeg"
     ],
     description: "イメージを一新したいというご依頼の元、洋菓子店のショップバッグを作成しました。"
+  },
+    12: {
+    title: "ひめじバル2026",
+    images: [
+      "images/himejibal2026.webp"
+    ],
+    description: "大人気の地域イベントの冊子の編集作業を行いました。"
   }
 };
 
