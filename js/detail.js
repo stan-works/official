@@ -47,12 +47,12 @@ const works = {
     description: "クラシカルな結婚式場の落ち着いたイメージを反映したオープンチラシをデザインしました。"
   },
   8: {
-    title: "purple様",
+    title: "絵画教室様",
     img: "images/purple_mockup.png",
-    description: "カフェpurple様のロゴ、LPとブランドサイトを制作しました。"
+    description: "絵画教室様のロゴ、STUDIOでのサイト作成をしました。"
   },
   9: {
-    title: "おかだ歯科様",
+    title: "歯科医院様",
     img: "images/okada.png",
     description: "地域密着型歯科医院の信頼感を表現するプレゼンスライドを提供しました。"
   },
