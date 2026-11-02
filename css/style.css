@@ -180,7 +180,7 @@ body {
   background: var(--color-glass-bg);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border: 1px solid var(--color-glass-border);
   box-shadow: 
     0 8px 32px var(--color-glass-shadow),
@@ -197,10 +197,10 @@ body {
 } */
 
 .glass-card-large {
-  background: var(--color-glass-bg);
+  /* background: var(--color-glass-bg); */
   backdrop-filter: blur(var(--glass-blur-heavy));
   -webkit-backdrop-filter: blur(var(--glass-blur-heavy));
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border: 1px solid var(--color-glass-border);
   padding: var(--spacing-lg);
   box-shadow: 
@@ -327,7 +327,7 @@ header:hover {
 }
 
 .logo-img {
-  width: 100%;
+  width: 75%;
   height: auto;
   display: block;
   /* filter: brightness(0) saturate(100%) invert(32%) sepia(85%) saturate(2313%) hue-rotate(207deg) brightness(94%) contrast(95%);
@@ -464,8 +464,8 @@ nav ul {
 
 .hero-title {
   font-family: 'Outfit', sans-serif;
-  font-size: clamp(3rem, 8vw, 7rem);
-  font-weight: 900;
+  font-size: clamp(3rem, 8vw, 4rem);
+  font-weight: 500;
   line-height: 1.1;
   margin-bottom: var(--spacing-md);
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
@@ -638,6 +638,10 @@ color: var(--color-text);
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
+.service-card p{
+  text-align: left;
+}
+
 .service-card[data-delay="0"] { animation-delay: 0.1s; }
 .service-card[data-delay="100"] { animation-delay: 0.2s; }
 .service-card[data-delay="200"] { animation-delay: 0.3s; }
@@ -664,7 +668,7 @@ color: var(--color-text);
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(167, 139, 250, 0.1));
-  border-radius: 24px;
+  border-radius: 50%;
   border: 2px solid rgba(59, 130, 246, 0.2);
   color: var(--color-primary);
   transition: all var(--transition-normal);
@@ -696,7 +700,7 @@ color: var(--color-text);
    ================================================ */
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
   gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
 }
@@ -719,8 +723,8 @@ color: var(--color-text);
   width: 100%;
   height: 300px;
   overflow: hidden;
-  border-radius: 20px;
-  margin-bottom: var(--spacing-md);
+  /* border-radius: 20px; */
+  /* margin-bottom: var(--spacing-md); */
   background: rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
@@ -735,25 +739,26 @@ color: var(--color-text);
   padding: var(--spacing-sm);
 }
 
-.work-overlay {
+/* .work-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(59, 130, 246, 0.1) 0%, rgba(167, 139, 250, 0.2) 100%);
   opacity: 0;
   transition: opacity var(--transition-normal);
   border-radius: 20px;
-}
+} */
 
 .work-card:hover .work-image img {
   transform: scale(1.05);
 }
 
-.work-card:hover .work-overlay {
+/* .work-card:hover .work-overlay {
   opacity: 1;
-}
+} */
 
 .work-info {
-  padding: 0 var(--spacing-md) var(--spacing-md);
+  padding:  var(--spacing-md);
+
 }
 
 .work-title {
@@ -842,10 +847,10 @@ color: var(--color-text);
   z-index: 2;
   margin: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
   padding: var(--spacing-lg);
-  background: rgba(255, 255, 255, 0.7);
+  /* background: rgba(255, 255, 255, 0.7); */
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-radius: 32px;
+  /* border-radius: 32px; */
   border: 1px solid rgba(59, 130, 246, 0.2);
   box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
 }
@@ -1046,7 +1051,7 @@ color: var(--color-text);
 .detail-img {
   width: 100%;
   height: 400px;
-  border-radius: 24px;
+  /* border-radius: 24px; */
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--color-glass-border);
